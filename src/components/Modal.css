@@ -1,0 +1,116 @@
+/* Modal styles extend the global SaaS design tokens from index.css. */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-4);
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(10px);
+  animation: modalFade var(--dur-std) var(--ease-out) both;
+}
+
+.modal {
+  width: min(680px, 100%);
+  max-height: min(760px, 92dvh);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-4);
+  background: var(--surface);
+  box-shadow: var(--shadow-4);
+  animation: modalRise var(--dur-std) var(--ease-out) both;
+}
+
+.modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.modal-head h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal-kicker {
+  margin-bottom: 4px;
+  color: var(--text-faint);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  padding: 22px;
+}
+
+.modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  padding: 16px 22px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--r-2);
+  color: var(--text-faint);
+  background: transparent;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+@media (max-width: 720px) {
+  .modal-backdrop {
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: 90dvh;
+    border-radius: var(--r-4) var(--r-4) 0 0;
+  }
+
+  .modal-head,
+  .modal-body,
+  .modal-foot {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .modal-foot {
+    flex-wrap: wrap;
+  }
+
+  .modal-foot .btn {
+    flex: 1 1 140px;
+  }
+}
+
+@keyframes modalFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalRise {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
