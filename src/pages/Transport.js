@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import Masthead, { SectionHead } from '../components/Masthead';
 import { useCollection } from '../hooks/useStore';
-import { TRANSPORT_PRODUCTS, fmtINR, fmtQtl, fmtDate, todayISO } from '../data/constants';
-import { IcTruck, IcPlus } from '../components/Icons';
+import { TRANSPORT_PRODUCTS, fmtINR, fmtDate, todayISO } from '../data/constants';
+import { IcPlus } from '../components/Icons';
 
 function currentMonth() {
   const d = new Date();

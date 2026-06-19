@@ -7,7 +7,7 @@ import { IcPlus } from '../components/Icons';
 export default function DO() {
   const { items: doOrders, create: createDO, edit: editDO } = useCollection('deliveryOrders');
   const { items: liftings, create: createLifting }          = useCollection('doLiftings');
-  const { items: _additions, create: addStock }              = useCollection('stockAdditions');
+  const { create: addStock }                                = useCollection('stockAdditions');
 
   const [tab, setTab] = useState('new');
 

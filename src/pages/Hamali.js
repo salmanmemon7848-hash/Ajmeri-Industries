@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import Masthead, { SectionHead } from '../components/Masthead';
 import { useCollection } from '../hooks/useStore';
 import { HAMALI_TYPES, fmtINR, fmtQtl, fmtDate, todayISO } from '../data/constants';
-import { IcHardHat, IcPlus } from '../components/Icons';
+import { IcPlus } from '../components/Icons';
 
 const UNITS_HAMALI = [
   { id: 'bags', label: 'Bags' },

@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import Masthead, { SectionHead } from '../components/Masthead';
 import { useCollection } from '../hooks/useStore';
 import { BY_PRODUCTS, fmtQtl, fmtDate, todayISO } from '../data/constants';
-import { IcGodown, IcPlus, IcPencil, IcSave, IcCheck, IcClose } from '../components/Icons';
+import { IcGodown, IcPlus, IcPencil, IcSave, IcClose } from '../components/Icons';
 
 /* ─── helpers ───────────────────────────────────────── */
 function capacityBadge(pct) {
